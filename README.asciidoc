@@ -13,6 +13,8 @@ So running with ant installed should be a simple:
 
 +$ java -jar StrategicServer.jar+
 
+After Startup a TCP Interface on Port 4223 and on the console is opened. If no user database is found then a new one is created with the user "root" with password "root" is created.
+
 
 LICENSE
 -------

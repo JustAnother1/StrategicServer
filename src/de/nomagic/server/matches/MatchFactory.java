@@ -32,7 +32,8 @@ public class MatchFactory
 
     private static Match[] allGameTypes = new  Match[]
     {
-        new TicTacToeMatch()
+        new TicTacToeMatch(),
+        new MampferMatch()
     };
 
     private final Logger log = LoggerFactory.getLogger(this.getClass().getName());

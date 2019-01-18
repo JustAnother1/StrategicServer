@@ -335,7 +335,7 @@ public class MampferMatch extends BaseMatch
         return new Object[] {Result.OK};
     }
 
-    public synchronized void checkIfNowWon()
+    private synchronized void checkIfNowWon()
     {
         int BOARD_FIELD_PLAYER_1 = 1;
         int BOARD_FIELD_PLAYER_2 = 2;

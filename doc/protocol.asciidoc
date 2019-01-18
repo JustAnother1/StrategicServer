@@ -1,0 +1,33 @@
+Communication Protocol between Strategic Server and Strategic Player
+====================================================================
+:toc:
+:numbered:
+:showcomments:
+
+== Abstract
+
+This document defines the data exchange between the strategic server and other components such as a strategic player.
+The same method of data presentation will be used on all data pipes.
+
+== Pipes
+
+the following data pipes are implemented:
+
+- console
+- TCP
+
+
+== Protocol
+
+The protocol consists of the transport layer that defines the exchange of bytes and Commands implemented on top of the transport layer.
+
+=== Transport Layer
+Communication is done by sending and receiving Strings encoded as UTF-8. Every line ends with a "\n".
+The server sends a Prompt (" $ ") to signal the client that it can send orders. The prompt line can be prefixed with additional data but the prompt will always be the end of the line. No "\n" will be send after the prompt.
+Responses to commands can have more than one line. The client can send the next command once it received a new prompt.
+
+=== Commands
+
+Commands are UTF-8 encoded and either with a "\n" or with a "\r".
+Each command starts with the unique command word. The data between the command word and the end of the line are command dependent.
+
